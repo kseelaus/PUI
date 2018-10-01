@@ -1,9 +1,199 @@
-#company_name{
+html{
+    background-color: #A1BDF0
+}
+
+.navbar{
+    color: #ACF39D;
+    font-family: Rosario;
+    background-color:  #0B3142;
+    display: grid;
+    grid-template-rows: 35px 35px 35px;
+    grid-template-columns: 200px 200px 1fr 200px 200px;
+    text-align: center;
     position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+#logo{
+    height:150px;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#shop{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+}
+
+#shop h2{
+    float: left;
+}
+
+#shop img{
+    height:15px;
+    width:auto;
+    float:left;
+    margin:10px;
+    padding-top: 16px;
+    
+}
+
+#about{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+
+}
+#searchbar{
+    z-index: 2;
+    font-family: Rosario;
+    background-color: #A1BDF0;
+    height:35px;
+    width: 200px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#searchbar img{
+    float: left;
+    height:30px;
+    width: auto;
+    padding:  3px;
+}
+
+#searchbar h2{
+    float: left;
+    color:#0B3142;
+
+    margin-top: 3px;
+    padding-left: 5px;
+
+}
+
+#viewcart{
+    grid-column-start: 5;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-column-end: span 1;  
+}
+#viewcart h2{
+    float: left;
+}
+
+#viewcart img{
+    height:30px;
+    width:auto;
+    float:left;
+    margin:10px;
+    padding-top: 5px;
+}
+
+#company_name{
     font-family: Russo One;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 50px;
+    font-size: 60px;
     color: #A1BDF0;
+    text-shadow: -2px 0 #0B3142, 0 2px #0B3142, 2px 0 #0B3142, 0 -2px#0B3142;
+    background: url(pics/beautiful-conifers-dog-247522.jpg);
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    right:0px;
+    top:0px;
+    height:700px;
+}
+
+#company_name h1{
+    position: relative;
+    left: 160px;
+    top: 80px; 
+}
+
+#company_name h2{
+    position: relative;
+    left: 160px;
+    top: 0px;
+    font-size: 45px;
+}
+
+
+#shoppingbutton{
+    color: #ACF39D;
+    font-family: Rosario;
+    background: #0B3142;
+    border: 3px solid #0B3142;
+    box-sizing: border-box;
+    border-radius: 20px;
+    position: absolute;
+    height: 100px;
+    width: 250px;
+    font-size: 20px;
+    text-align: center;
+    top: 410px;
+    left: 350px;
+    z-index: 2;
+    box-shadow: 3px 3px;
+}
+
+.squares{
+    color: #A1BDF0;
+    font-family: Rosario;
+    background: #0B3142;
+    display: grid;
+    grid-template-rows: 50px 200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: absolute;
+    top: 600px;
+    left:0px;
+    right:0px;
+
+}
+
+.squares h2{
+    grid-row-start: 1;
+    grid-row-end: span 1; 
+    text-align: center;
+}
+
+.squares img{
+    grid-row-start: 2;
+    grid-row-end: span 1; 
+    width:100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+#ourstory{
+    grid-column-start: 1;
+    grid-column-end: span 1; 
+}
+
+#news{
+    grid-column-start: 2;
+    grid-column-end: span 1; 
+    background: #214353;
+}
+
+#newarrivals{
+    grid-column-start: 3;
+    grid-column-end: span 1; 
+}
+
+#sale{
+    grid-column-start: 4;
+    grid-column-end: span 1; 
+    background: #214353;
 }
