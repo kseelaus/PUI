@@ -7,7 +7,7 @@
     </head>
     <body>
         <header class="header">
-            <img id="logo" src="pics/Logo.png"/>
+            <a href="homepage.html"><img id="logo" src="pics/Logo.png"/></a>
             <div class="navbar">
                 <div id="shop">
                     <h2>SHOP</h2>
@@ -24,30 +24,77 @@
                 <h2>Search</h2>
             </div>
         </header>
-        <h1 id="item">Dog Harness</h1>
-        <h3 id="reviewheader">Reviews</h3>
-        <div class="reviews">
-            <h3 class="reviewtitle">1) First Harness. Love it!</h3>
-            <p class="review">Lorem ipsum dolor sit amet, consectetur 
-                adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut 
-                aliquip ex ea commodo consequat. </p>
+        <div id = "pagename">
+                <h2><a href="browse.html">All Products</a> > Dog Products > Dog Harness</h2>
         </div>
-        <div class="sidebar">
-            <h2 class="dropdown">Select Color</h2>
-            <h2 class="dropdown">Select Size</h2>
-            <h2 id="quantity">Quantity</h2>
-            <h2>1</h2>
-            <h2 id="addcart">Add to Cart</h2>
-            <div id="descriptiontitle">
-                <h1>Description</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitatio</p>
-            </div>
+        <div class = "container">
+            <h1 id="itemtitle">Dog Harness</h1>
 
+            <img id="mini_a" src="pics/adorable-animal-canine-1254140.jpg" />
+            <img id="mini_b" src="pics/jorge-flores-98842-unsplash.jpg" />
+            <img id="mini_c" src="pics/beautiful-conifers-dog-247522.jpg" />
+            <img id="mini_d" src="pics/patrick-hendry-218936-unsplash.jpg" />
+
+            <img id="mainpic" src="pics/matthew-kane-774937-unsplash.jpg" />
+            <div class="reviews">
+                <h3 id="reviewheader">Reviews</h3>
+                <img id="avgreviews" src="pics/AvgStars.png"/>
+                <img id="starbox" src="pics/Starbox.png"/>
+                <div id="review1">
+                    <h3 class="reviewtitle">1) First Harness. Love it!</h3>
+                    <img src="pics/FiveStars.png"/>
+                    <p class="review">Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit, sed do eiusmod tempor incididunt ut 
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. </p>
+                </div>
+                <div id="review2">
+                    <h3 class="reviewtitle">2) Pretty Good, I guess</h3>
+                    <img src="pics/FoourStars.png"/>
+                    <p class="review">Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit, sed do eiusmod tempor incididunt ut 
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. </p>
+                </div>
+                <h3 id="viewmore">View More Reviews</h3>
+            </div>
+            
+            <div class="sidebar">
+                <div class="dropdown" id="colorselect">
+                    <h2>Select Color</h2>
+                    <img src="pics/MenuArrow.png"/>
+                </div>
+                <div class="dropdown" id="sizeselect">
+                    <h2>Select Size</h2>
+                    <img src="pics/MenuArrow.png"/>
+                </div>
+
+                <h2 id="quantity">Quantity: <span id="quantminus">  -  </span>1<span id="quantplus">+</span></h2>
+
+                <h2 id="price">$35.99</h2>
+                <h2 id="addcart">Add to Cart</h2>
+                <div id="description">
+                    <h1>Description</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore 
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        exercitatio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore 
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        exercitatio</p>
+                    <h2>Product Details</h2>
+                    <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Ut enim ad</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Ut enim ad minim veniam, quis nostrud exercitatio</li>
+
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </body>
 </html>
