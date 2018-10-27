@@ -12,13 +12,13 @@ class Hedgehog{
 }
 
 function getRandomInt(max){
-    return Math.floor(Math.random()*Math.floor(max));
-
+    return Math.floor(Math.random()*max);
 }
+
+
 
 $(document).ready(()=>{
     console.log("ready")
-
     var animal = new Hedgehog(pics[getRandomInt(pics.length)], names[getRandomInt(names.length)], ages[getRandomInt(ages.length)])
     console.log(animal)
     $("#animal-img").attr("src", animal.pic);
