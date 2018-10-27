@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="paws_main.js" type="text/javascript"></script>
     </head>
+    <!--Code for Navigation bar-->
     <body>
         <header class="header">
             <a href="homepage.html"><img id="logo" src="pics/Logo.png" alt="Muddy Paws"/></a>
@@ -16,11 +17,14 @@
                     <img src="pics/downarrow.png" alt="Menu"/>
                 </div>    
                 <h2 id="about">ABOUT</h2>
-                <a href="viewcart.html">
+                
                 <div id="viewcart">
-                    <h2>View Cart</h2>
-                    <img src="pics/shoppingcart.png" alt="Shopping Cart"/></a>
+                    <a href="viewcart.html">
+                        <h2>View Cart</h2>
+                        <img src="pics/shoppingcart.png" alt="Shopping Cart"/>
+                    </a>
                 </div>
+                
             </div>
             <h2 id="amountincart"></h2>
             <div id="searchbar">
@@ -31,6 +35,7 @@
         <div id = "pagename">
                 <h2><a href="browse.html">All Products</a> > Dog Products > Dog Harness</h2>
         </div>
+        <!--Dropdown menus - appear when color/size box clicked-->
         <div class = "hide" id="colorDropdown">
             <ul>
                 <li class="colorchoice" id="strawberry">Strawberry</li>
@@ -48,6 +53,7 @@
             </ul>
             <h3>View Size Guide</h3>
         </div>
+        <!--Confirmation window - appears after adding item to cart-->
         <div class = "hide" id="confirmation">
             <h1>Added to Cart!</h1>
             <h3 id="confitemname">Dog Harness</h3>
@@ -63,6 +69,7 @@
             </div>
 
         </div>
+        <!--Grid containing pictures, reviews, puchase options, and item info-->
         <div class = "container">
             <h1 id="itemtitle">Dog Harness</h1>
 
