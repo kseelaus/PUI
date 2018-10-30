@@ -1,11 +1,13 @@
 
+//Almost all funtionality is copied from the shopping cart page, smost names don't really make much sense here//
+
 $(document).ready(() => {
     //load shopping cart from local memory & update number in cart//
-    var shoppingcart = JSON.parse(localStorage.getItem("savedCart"));
-    console.log(shoppingcart)
-    var cartlength = shoppingcart.length
-    $("#amountincart").text(cartlength);
-    console.log(cartlength)
+    var shoppingcart = JSON.parse(localStorage.getItem("savedWishlist"));
+    var actualcart = JSON.parse(localStorage.getItem("savedCart"));
+    var cartlength = shoppingcart.length;
+    var actualcartlength = actualcart.length
+    $("#amountincart").text(actualcartlength);
 
     //check shopping cart.  If empty, display 'empty' message.  Otherwise, loop through objects in array and add html code for each//
     var $emptycart = $('#emptycart');
@@ -13,8 +15,6 @@ $(document).ready(() => {
     if(cartlength == 0){
         $emptycart.show()
     } else {
-        var totalPrice = 0.00;
-        var totalQuant = 0;
         for (i = 0; i < cartlength; i++){
             var currentItem = shoppingcart[i];
             var tempName = currentItem.name;
@@ -22,12 +22,6 @@ $(document).ready(() => {
             var tempColor = currentItem.color;
             var tempSize = currentItem.size;
             var tempPrice = currentItem.price;
-
-            //track total price and quantity of items//
-            console.log(tempPrice)
-            totalPrice += parseFloat(tempPrice);
-            totalQuant += parseInt(tempQuant);
-            console.log(tempPrice)
 
             //write and add html code for each item with specific product details
             var itemNum = i +1
@@ -38,9 +32,7 @@ $(document).ready(() => {
             $cartlist.append(tempCode);
 
         }
-        //update total price and quantity of items in cart//
-        $("#totalQuant").text(totalQuant);
-        $("#totalPrice").text(totalPrice.toFixed(2));
+        
     }
 
     //funtionality for 'remove' item button//
@@ -52,7 +44,7 @@ $(document).ready(() => {
         shoppingcart.splice(itemindex, 1);
         console.log(shoppingcart);
         //update local storage & and reload page to update previous code//
-        localStorage.setItem("savedCart", JSON.stringify(shoppingcart));
+        localStorage.setItem("savedWishlist", JSON.stringify(shoppingcart));
         location.reload();
     });
 

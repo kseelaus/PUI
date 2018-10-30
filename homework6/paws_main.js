@@ -3,39 +3,46 @@ $(document).ready(()=>{
 
 //load shopping cart from local memory & update number in cart//
     var shoppingcart = JSON.parse(localStorage.getItem("savedCart"));
+    var wishlist = JSON.parse(localStorage.getItem("savedWishlist"));
     var cartlength = shoppingcart.length
     $("#amountincart").text(cartlength);
 
 //update quantity and price when + or - clicked//
     $(document).on("click", "#quantplus", function() {
         var quant = $("#quantnum").text();
+        var price = $("#totalprice").text();
+        var newprice = parseFloat(price) + (parseFloat(price)/parseInt(quant));
+        $("#totalprice").text(newprice.toFixed(2));
+        
+        var quant = $("#quantnum").text();
         var newquant = parseInt(quant) + 1;
         $("#quantnum").text(newquant);
     
-        var price = $("#totalprice").text();
-        var newprice = parseFloat(price) + 35.99;
-        $("#totalprice").text(newprice.toFixed(2));
+        
 
         //only allow clicking of "add to cart" of options are selected and quantity more than 0//
         if ($("#sizename").text() != "Select Size" && $("#colorname").text() != "Select Color"){
             $("#addcart").css('backgroundColor', "#ACF39D");
+            $("#addwishlist").css('backgroundColor', "whitesmoke");
         } else {
             $("#addcart").css('backgroundColor', "#0B3142");
+            $("#addwishlist").css('backgroundColor', "#0B3142");
         }
     });
     $(document).on("click", "#quantminus", function() {
         if($("#quantnum").text() > 0) {
             var quant = $("#quantnum").text();
+            var price = $("#totalprice").text();
+            newprice = parseFloat(price) - (parseFloat(price)/parseInt(quant));
+            $("#totalprice").text(newprice.toFixed(2));
+            
             newquant = parseInt(quant) - 1;
             $("#quantnum").text(newquant);
-    
-            var price = $("#totalprice").text();
-            newprice = parseFloat(price) - 35.99;
-            $("#totalprice").text(newprice.toFixed(2));
         }
         //can't have less than 0// 
         if($("#quantnum").text() == 0){
             $("#addcart").css('backgroundColor', "#0B3142");
+            $("#addwishlist").css('backgroundColor', "#0B3142");
         }
     });
     
@@ -68,8 +75,10 @@ $(document).ready(()=>{
         //only allow clicking of "add to cart" of options are selected and quantity more than 0//
         if ($("#colorname").text() != "Select Color" && $("#quantnum").text() != 0){
             $("#addcart").css('backgroundColor', "#ACF39D");
+            $("#addwishlist").css('backgroundColor', "whitesmoke");
         } else {
             $("#addcart").css('backgroundColor', "#0B3142");
+            $("#addwishlist").css('backgroundColor', "#0B3142");
         }
 
         $sizeDropdown.hide();
@@ -82,8 +91,10 @@ $(document).ready(()=>{
         //only allow clicking of "add to cart" of options are selected and quantity more than 0//
         if ($("#sizename").text() != "Select Size" && $("#quantnum").text() != 0){
             $("#addcart").css('backgroundColor', "#ACF39D");
+            $("#addwishlist").css('backgroundColor', "whitesmoke");
         } else {
             $("#addcart").css('backgroundColor', "#0B3142");
+            $("#addwishlist").css('backgroundColor', "#0B3142");
         }
         $colorDropdown.hide();
     });
@@ -121,11 +132,11 @@ $(document).ready(()=>{
             console.log(harness);
             
             //update code for confirmation window with selected product details and display window//
-            $("#itemquant").text(harness.quantity);
-            $("#itemcolor").text(harness.color);
-            $("#itemsize").text(harness.size);
-            $("#itemprice").text(harness.price);
-            $("#confitemname").text(harness.name);
+            $(".itemquant").text(harness.quantity);
+            $(".itemcolor").text(harness.color);
+            $(".itemsize").text(harness.size);
+            $(".itemprice").text(harness.price);
+            $(".confitemname").text(harness.name);
             $confirmation.show();
     
         }else{
@@ -136,7 +147,37 @@ $(document).ready(()=>{
         localStorage.setItem("savedCart", JSON.stringify(shoppingcart));
         $("#amountincart").text(shoppingcart.length);
     });
-
+//same functionality for wishlist//
+    if (wishlist == undefined){
+        var wishlist = [];
+    }
+    var $wishlistConfirmation = $('#wishlistConfirmation');
+    $(document).on("click", "#addwishlist", function() {
+        //only allow if options selected//
+        if ($("#sizename").text() != "Select Size" && 
+        $("#colorname").text() != "Select Color" && 
+        $("#quantnum").text() != 0){
+            
+            var currentItem = new item($("#totalprice").text(), $("#itemtitle").text(), 
+            $("#colorname").text(), $("#sizename").text(), $("#quantnum").text());
+            wishlist.push(currentItem);
+            
+            console.log(wishlist);
+            console.log(currentItem);
+            
+            //update code for confirmation window with selected product details and display window//
+            $(".itemquant").text(currentItem.quantity);
+            $(".itemcolor").text(currentItem.color);
+            $(".itemsize").text(currentItem.size);
+            $(".itemprice").text(currentItem.price);
+            $(".confitemname").text(currentItem.name);
+            $wishlistConfirmation.show();
+    
+        }else{
+            console.log("fail")
+        }
+        localStorage.setItem("savedWishlist", JSON.stringify(wishlist));
+    });
     //functionality for buttons on confirmation window//
     $(document).on("click", "#undo", function() {
         shoppingcart.pop();
@@ -152,8 +193,29 @@ $(document).ready(()=>{
         $(confirmation).hide();
     });
 
+    $(document).on("click", "#wishlistUndo", function() {
+        wishlist.pop();
+        $wishlistConfirmation.hide();
+        console.log("removed");
+        console.log(wishlist);
+        //update local storage and number in cart displayed in navbar//
+        localStorage.setItem("savedWishlist", JSON.stringify(wishlist)); 
+    });
+    
+    $(document).on("click", "#wishlistContinue", function() {
+        $(wishlistConfirmation).hide();
+    });
+
     //indicate clickability only if options selected//
     $("#addcart").hover(function() {
+        if ($("#sizename").text() != "Select Size" && 
+        $("#colorname").text() != "Select Color" && 
+        $("#quantnum").text() != 0){
+            $(this).css('cursor','pointer');
+        }
+    });
+
+    $("#addwishlist").hover(function() {
         if ($("#sizename").text() != "Select Size" && 
         $("#colorname").text() != "Select Color" && 
         $("#quantnum").text() != 0){
@@ -185,6 +247,13 @@ $(document).ready(()=>{
         $(this).css('cursor','pointer');
     });
     $("#continue").hover(function() {
+        $(this).css('cursor','pointer');
+    });
+
+    $("#wishlistUndo").hover(function() {
+        $(this).css('cursor','pointer');
+    });
+    $("#wishlistContinue").hover(function() {
         $(this).css('cursor','pointer');
     });
 

@@ -1,11 +1,11 @@
 /*Formatting for entire website*/
 
 html{
-    background-color: #A1BDF0;
+    background-color: rgb(214, 214, 214);
 }
 
 .navbar{
-    color: #ACF39D;
+    color: whitesmoke;
     font-family: Rosario;
     background-color:  #0B3142;
     display: grid;
@@ -32,8 +32,9 @@ html{
     position: fixed;
     top: 105px;
     height:45px;
-    background-color: #ACF39D;
+    background-color: rgb(154, 180, 149);
     color: #0B3142;
+    border: 3px solid #0B3142;
     font-family: Rosario;
     left:0px;
     right: 0px; 
@@ -70,8 +71,8 @@ html{
 }
 
 #about{
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-start: 3;
+    grid-column-end: span 1;
     grid-row-start: 1;
     grid-row-end: span 3;
 
@@ -79,7 +80,7 @@ html{
 #searchbar{
     z-index: 3;
     font-family: Rosario;
-    background-color: #A1BDF0;
+    background-color: whitesmoke;
     height:35px;
     width: 200px;
     position: fixed;
@@ -97,7 +98,6 @@ html{
 #searchbar h2{
     float: left;
     color:#0B3142;
-
     margin-top: 3px;
     padding-left: 5px;
 
@@ -110,7 +110,22 @@ html{
     grid-column-end: span 1;  
 }
 #viewcart h2{
+    color: whitesmoke;
     float: left;
+
+}
+#viewlist{  
+    grid-column-start: 4;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-column-end: span 1; 
+    
+
+}
+#viewlist a{
+    color: whitesmoke;
+    float: left;
+    text-align: center;
 }
 
 #viewcart img{
@@ -129,7 +144,7 @@ html{
     font-weight: normal;
     line-height: normal;
     font-size: 60px;
-    color: #A1BDF0;
+    color: rgb(154, 180, 149);
     text-shadow: -2px 0 #0B3142, 0 2px #0B3142, 2px 0 #0B3142, 0 -2px#0B3142;
     background: url(pics/beautiful-conifers-dog-247522.jpg);
     background-size: cover;
@@ -152,11 +167,12 @@ html{
     left: 160px;
     top: 0px;
     font-size: 45px;
+    color: rgb(214, 214, 214);
 }
 
 
 #shoppingbutton{
-    color: #ACF39D;
+    color: whitesmoke;
     font-family: Rosario;
     background: #0B3142;
     border: 3px solid #0B3142;
@@ -179,7 +195,7 @@ a{
 }
 
 .squares{
-    color: #A1BDF0;
+    color: whitesmoke;
     font-family: Rosario;
     background: #0B3142;
     display: grid;
@@ -195,7 +211,7 @@ a{
     grid-row-start: 1;
     grid-row-end: span 1; 
     text-align: center;
-
+    margin-bottom: 0px;
 
 }
 
@@ -256,7 +272,7 @@ a{
 .itemname{
     margin: 0px;
     background-color: #0B3142;
-    color: #E2EFDE;
+    color: whitesmoke;
     height: 100%;
     padding:10px;
 }
@@ -264,12 +280,12 @@ a{
 .itemdescription{
     margin: 0px;
     background-color: #214353;
-    color: #E2EFDE;
+    color: whitesmoke;
     padding:10px;
 }
 .itemlink{
     color: #0B3142;
-    background-color: #E2EFDE;
+    background-color: whitesmoke;
     border-radius: 15px;
     height:20px;
     box-shadow: 3px 3px;
@@ -305,10 +321,12 @@ a{
     grid-row-start: 3;
     grid-row-end: span 1;
 }
-#dogharnesslink a{
+.itemlink a{
     color: #0B3142;
 }
-
+#shop a{
+    color: whitesmoke;
+}
 
 #dogfoodimg{
     grid-column-start: 3;
@@ -522,7 +540,7 @@ a{
     grid-row-end: span 1;
     text-align: center;
     background-color: #0B3142;
-    color: #E2EFDE;
+    color: whitesmoke;
     border-radius: 15px;
     height:75%;
     box-shadow: 1px 1px;
@@ -531,7 +549,7 @@ a{
 
 .sidebar{
     background-color: #214353;
-    color: #E2EFDE;
+    color: whitesmoke;
     grid-column-start: 6;
     grid-row-start: 1;
     grid-row-end: span 6;
@@ -571,7 +589,7 @@ a{
 }
 
 #colorDropdown{
-    background-color: #E2EFDE;
+    background-color: whitesmoke;
     color: #0B3142;
     border: 3px solid #0B3142;
     grid-row-start: 2;
@@ -586,7 +604,7 @@ a{
 }
 
 #sizeDropdown{
-    background-color: #E2EFDE;
+    background-color: whitesmoke;
     color: #0B3142;
     border: 3px solid #0B3142;
     grid-row-start: 2;
@@ -699,7 +717,7 @@ a{
 #price{
     grid-row-start: 4;
     grid-row-end: span 1;
-    border: 3px solid #E2EFDE;
+    border: 3px solid whitesmoke;
     width: 60%;
     height: 70%;
 
@@ -712,6 +730,17 @@ a{
     width: 100%;
     padding-top:15px;
     box-shadow: 6px 6px;
+}
+
+#addwishlist{
+    background-color: #0B3142;
+    border-radius: 30px;
+    color: #214353;
+    height: 70%;
+    width: 100%;
+    padding-top:15px;
+    box-shadow: 6px 6px;
+    margin-top:30px;
 }
 
 #description{
@@ -769,8 +798,8 @@ a{
 }
 
 
-#confirmation{
-    background-color: #E2EFDE;
+.confirmation_format{
+    background-color: whitesmoke;
     border-radius: 30px;
     border: 5px solid #0B3142;
     position: fixed;
@@ -783,11 +812,11 @@ a{
     font-family: Rosario;
 }
 
-#confirmation h1{
+.confirmation_format h1{
     text-align: center;
 }
 
-#confirmation h3{
+.confirmation_format h3{
     padding-left: 100px;
     font-weight: bold;
 }
@@ -810,6 +839,7 @@ a{
 #confirmation_options a{
     color: #000000;
 }
+
 #undo{
     grid-column-start: 1;
     grid-column-end: span 1;
@@ -819,6 +849,17 @@ a{
     background: #973C3C;
     height:100%;
 }
+
+#wishlistUndo{
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    border: 3px solid #0B3142;
+    background: #973C3C;
+    height:100%;
+}
+
 #continue{
     grid-column-start: 2;
     grid-column-end: span 1;
@@ -827,7 +868,16 @@ a{
     border: 3px solid #0B3142;
     height:120%;
 }
-#checkout{
+#wishlistContinue{
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    border: 3px solid #0B3142;
+    height:120%;
+}
+
+.checkout{
     grid-column-start: 3;
     grid-column-end: span 1;
     grid-row-start: 1;
@@ -840,7 +890,7 @@ a{
 /* formatting for viewcart page*/
 
 .viewcart #pagename {
-    background-color: #A1BDF0;
+    background-color: rgb(154, 180, 149);
     color: #0B3142;
 }
 
@@ -857,7 +907,7 @@ a{
 }
 
 #cartlist{
-    background-color: #E2EFDE;
+    background-color:  rgb(214, 214, 214);
     grid-column-start: 1;
     grid-column-end: 2;
     padding-left: 25%;
@@ -892,7 +942,7 @@ a{
     background-color: #214353;
     grid-column-start: 3;
     grid-column-end: span 1;
-    color: #E2EFDE;
+    color: whitesmoke;
     text-align: center;
     position: fixed;
     top: 150px;
@@ -907,7 +957,7 @@ a{
     height: auto;
     top: 250px;
     left: 5%;
-    background: #E2EFDE;
+    background: whitesmoke;
     border: 10px solid #973C3C;
     box-sizing: border-box;
     text-align: center;
@@ -924,6 +974,24 @@ a{
 
     margin: auto;
     box-shadow: 6px 6px;
+}
+
+#socialmedia{
+    background-color: #ACF39D;
+    border-radius: 30px;
+    color: #0B3142;
+    width: 80%;
+    margin: auto;
+    box-shadow: 6px 6px;
+}
+
+.sendlink{
+    background-color: whitesmoke;
+    border-radius: 30px;
+    color: #0B3142;
+    width: 80%;
+    margin: auto;
+    box-shadow: 3px 3px;
 }
 
 #amountincart{
