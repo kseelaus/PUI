@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kevin Seelaus - Portfolio</title>
+        <!--<link href="hover.css" rel="stylesheet" media="all">-->
+        <link rel="stylesheet" type="text/css" href="assets/css/portMain.css">
+        <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic|Carrois+Gothic+SC" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/scripts/portScript.js" type="text/javascript"></script>
+    </head>
+    
+    
+    <body onload="initAOS()">
+        <nav>
+            <div class= "hamburger">
+                <img src="assets/pics/hamburger.png" />
+            </div>
+            <h2 class = "portLink navLink" id="currentLink">Portfolio</h2>
+            <h2 class = "resLink navLink hvr-bounce-in"><a href="resume.html">Resume</a></h2>
+            <h2 class = "aboutLink navLink hvr-bounce-in"><a href="aboutme.html">About Me</a></h2>
+        </nav>
+        <div class=navMenu>
+            <h2 class = "hvr-bounce-in"><a href="resume.html">Resume</a></h2><br>
+            <h2 class = "hvr-bounce-in"><a href="aboutme.html">About Me</a></h2><br>
+        </div>
+        <div class="myName">
+            <h1>Kevin Seelaus</h1>
+        </div>
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="projectLinks" data-aos="fade-left" data-aos-duration="2000">
+                <a class="projectSquare  hvr-grow" id="projectSquare1" href="projects/tips.html">
+                    <img class="projectPic" id="projectPic1" src="assets/pics/tipsPic.jpg" />
+                    <h2 class="projectName" id="projectName1">Psychology Research</h2>
+                    <div class="description projectDescription">
+                        <h3>The Acting Workshop</h3>
+                        <p>A research study testing an experimental intervention for schizophrenia risk</p>
+                    </div>
+                </a>
+                <a class="projectSquare hvr-grow" id="projectSquare2" href="projects/okcarpool.html">
+                    <img class="projectPic" id="projectPic2" src="assets/pics/affinity.JPG" />
+                    <h2 class="projectName" id="projectName2">User-Centered Research</h2>
+                    <div class="description projectDescription">
+                        <h3>OkCarpool</h3>
+                        <p>Generative research and design on improving student trasportation</p>
+                    </div>
+                </a>
+                <a class="projectSquare hvr-grow" id="projectSquare3" href="projects/atlantis.html">
+                    <img class="projectPic" id="projectPic3" src="assets/pics/atlantis_portHome.JPG" />
+                    <h2 class="projectName" id="projectName3">Data-Driven Design</h2>
+                    <div class="description projectDescription">
+                        <h3>Atlantis Hub Display</h3>
+                        <p>Iterative design to produce a clean information display for travel by plane, train, and ferry</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="otherWork">
+            <h2>Other Work</h2>
+            <div class="workLinks" data-aos="fade-left" data-aos-duration="2000">
+                <a class="workSquare hvr-grow" id="workSquare1" href="projects/microwave.html">
+                    <img class="workPic" id="workPic1" src="assets/pics/microwave.JPG" />
+                    <h2 class="workName" id="workName1">Physical Prototyping</h2>
+                    <div class="description workDescription">
+                        <h3>Microwave Redesign</h3>
+                        <p>Reorganization of an existing control system to improve usability</p>
+                    </div>
+                </a>
+                <a class="workSquare hvr-grow" id="workSquare2" href="projects/infographic.html">
+                    <img class="workPic hvr-grow" id="workPic2" src="assets/pics/watch.jpg" />
+                    <h2 class="workName" id="workName2">Infographic Design</h2>
+                    <div class="description workDescription">
+                        <h3>Activity Trackers Explained</h3>
+                        <p>An infographic designed to explain the technology used in wearable fitness trackers</p>
+                    </div>
+                </a>
+                <a class="workSquare hvr-grow" id="workSquare3" href="projects/haii.html">
+                    <img class="workPic" id="workPic3" src="assets/pics/robot.jpg" />
+                    <h2 class="workName" id="workName3">Perceptions of AI</h2>
+                    <div class="description workDescription">
+                        <h3>AI for Mental Health Intervention</h3>
+                        <p>An exploration of mental models for artificial intelligence as a predictor of risk for mental illness</p>
+                    </div>
+                </a>
+                <a class="workSquare hvr-grow" id="workSquare4" href="projects/youthsports.html">
+                    <img class="workPic" id="workPic4" src="assets/pics/family.png" />
+                    <h2 class="workName" id="workName4">Responsive Web Design</h2>
+                    <div class="description workDescription">
+                        <h3>Youth Sports Communication</h3>
+                        <p>Research and design of a website for mobile and desktop to improve information flow for a youth soccer league</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <div id="contactInfo">
+                <h3>kseelaus13@gmail.com</h3>
+                <h3>610-368-1587</h3>
+            </div>
+            <a href="mailto:kseelaus13@gmail.com?subject=Hi Kevin, I'd like to connect!">
+                <img class="hvr-bounce-in" id="email" src="assets/pics/envelope.png">
+            </a>
+            <a href="https://www.instagram.com/kseelaus/">
+                <img class="hvr-bounce-in" id="insta" src="assets/pics/instagram.png">
+            </a>
+            <img class="hvr-bounce-in" id="linkedin" src="assets/pics/linkedin.png">
+        </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+    
+</html>
