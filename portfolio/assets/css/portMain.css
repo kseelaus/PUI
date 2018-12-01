@@ -1,4 +1,4 @@
-
+/*Code from hover.css for hover animations*/
 /* Bounce In */
 .hvr-bounce-in {
     display: inline-block;
@@ -31,7 +31,15 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
-/*whole site*/
+
+
+
+
+/*whole for all pages on site*/
+
+body{
+    margin: 0px;
+}
 
 html {
     font-family: 'Carrois Gothic', sans-serif;
@@ -42,7 +50,7 @@ a{
     text-decoration: none;
 }
 
-/*NavBar Styling*/
+/*NavBar Styling - single row grid*/
 
 nav {
     text-align: center;
@@ -63,29 +71,23 @@ nav a {
     color: #92B1B9;
 }
 
-body{
-    margin: 0px;
-}
-
 .portLink {
     grid-column-start: 2;
     grid-column-end: span 1;
 }
-
 .resLink {
     grid-column-start: 3;
     grid-column-end: span 1;
 }
-
 .aboutLink {
     grid-column-start: 4;
     grid-column-end: span 1;
 }
-
+/*current site name should be grayed out*/
 #currentLink {
     color: #697076;
 }
-
+/*for responsivity - hamburger menu with drop-down*/
 .hamburger{
     display: none;
     grid-column-start: 1;
@@ -97,7 +99,6 @@ body{
     padding-top: 15px;
     padding-left: 15px;
 }
-
 .navMenu{
     display: none;
     position: fixed;
@@ -108,14 +109,13 @@ body{
     color: #92B1B9;
     z-index: 180;
     font-family: 'Carrois Gothic SC', sans-serif;
-    text-align: center;
-    
+    text-align: center;  
 }
 .navMenu a {
     color: #92B1B9;
 }
 
-/*Responsivity*/
+/*Responsivity - media query for navigation bar to switch to hamburger menu*/
 @media only screen and (max-width: 600px) {
     .navLink{
         display: none;
@@ -125,10 +125,8 @@ body{
     }   
 }
 
-/*Responsivity*/
 
-
-/* Footer */
+/* Footer styling - single row grid */
 footer {
     left: 0px;
     right: 0px;
@@ -141,9 +139,6 @@ footer {
     grid-column-gap: 15px;
     padding: 20px;
     margin-bottom: 0px;
-    z-index: 2;
-    
-
 }
 footer img{
     width: 50px;
@@ -164,7 +159,8 @@ footer img{
     cursor: pointer;
 }
 
-/* Main page style */
+
+/* Main page of portfolio styling*/
 
 .myName {
     text-align: center;
@@ -177,23 +173,21 @@ footer img{
 
 .projects {
     position: relative;
-    margin: 30px;
-    
+    margin: 30px;    
 }
-
 .otherWork {
     position: relative;
     padding-top: 30px;
     margin: 30px;
 }
 
+/* Grid displays for project links (separated into projects and other work)*/
 .projectLinks {
     display: grid;
     grid-template-rows: 250px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
 }
-
 #projectSquare1, #workSquare1 {
     grid-row:1;
     grid-column-start: 1;
@@ -209,25 +203,22 @@ footer img{
     grid-column-start: 3;
     grid-column-end: span 1; 
 }
-
 #workSquare4 {
     grid-row:1;
     grid-column-start: 4;
     grid-column-end: span 1; 
 }
-
+/*Additional single-column grid within each project card*/
 .projectSquare, .workSquare{
     display: grid;
     grid-template-rows: 3fr 1fr;
     grid-template-columns: 1fr;
 }
-
 .projectSquare img, .workSquare img {
     height:250px;
     width:100%;
     object-fit: cover;
 }
-
 .projectPic, .workPic {
     grid-column: 1;
     grid-row-start: 1;
@@ -235,7 +226,6 @@ footer img{
     z-index: 0;
 
 }
-
 .projectName {
     grid-column: 1;
     grid-row-start: 2;
@@ -249,14 +239,12 @@ footer img{
     height: 62px;
     margin-bottom: 0px;
 }
-
 .workLinks {
     display: grid;
     grid-template-rows: 250px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 20px;
 }
-
 .workName {
     grid-column: 1;
     grid-row-start: 2;
@@ -270,7 +258,7 @@ footer img{
     height: 62px;
     margin-bottom: 0px;
 }
-
+/*Descriptions overlap image, and are hidden unless hovered over*/
 .description {
     grid-column: 1;
     grid-row-start: 1;
@@ -281,7 +269,6 @@ footer img{
     padding: 25px;
     display: none;
 }
-
 .projectDescription{
     background-color: rgb(79,42,32, 0.75);
 }
@@ -291,18 +278,15 @@ footer img{
 
 
 
-/*Resume */
-
+/*Resume page styling*/
 .resumeContent{
     padding-left: 25px;
     padding-right: 25px;
 }
-
 .resumeContent hr{
     border: 2px solid #71631E;
     border-radius: 5px;
 }
-
 .resumeContent h1{
     color: #313B43;
     font-size: 1.5em;
@@ -317,8 +301,8 @@ footer img{
     float: right;
 }
 
-/*About Me */
 
+/*About Me page styling - many individually styled grid elements*/
 .aboutPic{
     width: 100%;
     height: auto;
@@ -393,47 +377,8 @@ footer img{
     padding-top:50px;
 }
 
-/*General for project pages*/
-.sidenav {
-    
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 150px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 0; /* Stay on top */
-    top: 50px; /* Stay at the top */
-    left: 0;
-    background-color: #33505E;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px;
-}
 
-.sidenav hr{
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 15px;
-
-}
-
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-}
-.sidenav h4{
-    color: #92B1B9;
-    text-align: center;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-
+/* Project page of portfolio styling - 12 column grid with mostly reusable styling*/
 .projectContent{
     position: relative;
     top: 100px;
@@ -441,13 +386,12 @@ footer img{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
 }
-
 .introTitle{
     grid-column-start: 3;
     grid-column-end: 9;
     padding-bottom: 25px;
 }
-
+/*For pictures and corresponding on the left or right half*/
 .leftPic{
     width: 100%;
     height: auto;
@@ -462,22 +406,6 @@ footer img{
     grid-column-end: 11;
     margin-top: 25px;
 }
-
-.execSummary{
-    grid-column-start: 3;
-    grid-column-end: 11;
-    background-color: #CFC4C2;
-    padding: 25px;
-    border-radius: 50px;
-    width:100%;
-    height: 90%;
-    filter: drop-shadow(0 0 0.4rem black);
-}
-
-#infographicExec{
-    background-color: #C7CFD3;
-}
-
 .rightText{
     grid-column-start: 7;
     grid-column-end: 12;
@@ -489,6 +417,22 @@ footer img{
     grid-column-end: 7;
     margin-top: 25px;
     padding-right: 20px;
+}
+/*executive summary in a colored box*/
+.execSummary{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    background-color: #CFC4C2;
+    padding: 25px;
+    border-radius: 50px;
+    width: 100%;
+    height: 90%;
+    filter: drop-shadow(0 0 0.4rem black);
+}
+
+/*Different color for infographic page - will eventually have for all pages*/
+#infographicExec{
+    background-color: #C7CFD3;
 }
 
 .context{
@@ -503,6 +447,7 @@ footer img{
     padding-left: 30px;    
 }
 
+/*colored bubble for key insights*/
 .keyInsight{
     grid-column-start: 3;
     grid-column-end: 11;
@@ -517,10 +462,12 @@ footer img{
     text-justify: center;
 }
 
+/*set columns for regular text*/
 .regularContent{
     grid-column-start: 3;
     grid-column-end: 11;
 }
+/*classes to set rows*/
 .row4{
     grid-row: 4;
 }
@@ -552,6 +499,7 @@ footer img{
     margin-bottom: 50px;
 }
 
+/*for big pictures*/
 .finalProject{
     grid-column-start: 1;
     grid-column-end: 12;
@@ -568,6 +516,7 @@ footer img{
     object-fit: cover;
 }
 
+/*code to temporarily place images on the page*/
 .temp{
     width: 100%;
     height: auto;
@@ -588,6 +537,7 @@ footer img{
     grid-row-start: 8;
 }
 
+/*responsivity - media query to compress grid on home portfolio page to two columns*/
 
 @media only screen and (max-width: 1000px) {
     .projectLinks, .workLinks {
@@ -609,6 +559,9 @@ footer img{
     }
     
 }
+
+/*responsivity - media query to compress grid on home portfolio page to single column*/
+/*responsivity - also rearranges alignment on resume page*/
 @media only screen and (max-width: 600px) {
     .projectLinks {
         grid-template-columns: 1fr;
@@ -649,7 +602,7 @@ footer img{
     }
     
 }
-
+/*responsivity - media query to compress grid on about me page and project pages*/
 @media only screen and (max-width: 750px) {
     #aboutGrid{
         position: relative;
